@@ -31,7 +31,7 @@ under the License.
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<flink.version>1.7.1</flink.version>
+		<flink.version>1.9.2</flink.version>
 		<java.version>1.8</java.version>
 		<scala.binary.version>2.12</scala.binary.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
@@ -49,7 +49,7 @@ under the License.
 		</dependency>
 		<dependency>
 			<groupId>org.apache.flink</groupId>
-			<artifactId>flink-streaming-java_${scala.binary.version}</artifactId>
+			<artifactId>flink-streaming-java</artifactId>
 			<version>${flink.version}</version>
 			<scope>provided</scope>
 		</dependency>
@@ -57,7 +57,7 @@ under the License.
 		<!-- runtime-web dependency is need to start web UI from IDE -->
                 <dependency>
                         <groupId>org.apache.flink</groupId>
-                        <artifactId>flink-runtime-web_${scala.binary.version}</artifactId>
+                        <artifactId>flink-runtime-web</artifactId>
                         <version>${flink.version}</version>
                         <scope>provided</scope>
                 </dependency>
@@ -65,12 +65,12 @@ under the License.
 		<!-- queryable-state dependencies are needed for respective examples -->
                 <dependency>
                         <groupId>org.apache.flink</groupId>
-                        <artifactId>flink-queryable-state-runtime_${scala.binary.version}</artifactId>
+                        <artifactId>flink-queryable-state-runtime</artifactId>
                         <version>${flink.version}</version>
                 </dependency>
                 <dependency>
                         <groupId>org.apache.flink</groupId>
-                        <artifactId>flink-queryable-state-client-java_${scala.binary.version}</artifactId>
+                        <artifactId>flink-queryable-state-client-java</artifactId>
                         <version>${flink.version}</version>
                 </dependency>
 
@@ -229,13 +229,13 @@ under the License.
 				</dependency>
 				<dependency>
 					<groupId>org.apache.flink</groupId>
-					<artifactId>flink-streaming-java_${scala.binary.version}</artifactId>
+					<artifactId>flink-streaming-java</artifactId>
 					<version>${flink.version}</version>
 					<scope>compile</scope>
 				</dependency>
 				<dependency>
                                         <groupId>org.apache.flink</groupId>
-                                        <artifactId>flink-runtime-web_${scala.binary.version}</artifactId>
+                                        <artifactId>flink-runtime-web</artifactId>
                                         <version>${flink.version}</version>
                                         <scope>compile</scope>
                                 </dependency>

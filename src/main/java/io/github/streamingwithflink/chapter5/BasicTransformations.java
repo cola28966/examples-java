@@ -34,8 +34,11 @@ public class BasicTransformations {
 
     public static void main(String[] args) throws Exception {
 
+//        String path = "C:\\code\\examples-java\\target\\examples-java-1.0.jar";
+        String path = "C:\\code\\examples-java\\src\\main\\resources\\WordCount.jar";
         // set up the streaming execution environment
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        StreamExecutionEnvironment env = StreamExecutionEnvironment.createRemoteEnvironment("47.116.45.30", 8081, path);
+        http://47.116.45.30:8081/#/overview
 
         // use event time for the application
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
