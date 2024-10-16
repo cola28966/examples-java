@@ -26,8 +26,10 @@ public class RollingSum {
 
     public static void main(String[] args) throws Exception {
 
+        String inputPath = "file:///home/vka/data/test.csv";
+
         // set up the streaming execution environment
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        StreamExecutionEnvironment env = StreamExecutionEnvironment.createRemoteEnvironment("",8081, null);
 
         DataStream<Tuple3<Integer, Integer, Integer>> inputStream = env.fromElements(
             Tuple3.of(1, 2, 2), Tuple3.of(2, 3, 1), Tuple3.of(2, 2, 4), Tuple3.of(1, 5, 3));
